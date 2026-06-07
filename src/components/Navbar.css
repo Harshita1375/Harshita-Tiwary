@@ -1,0 +1,156 @@
+/* --- Color Variables matching your image --- */
+:root {
+  --bg-dark: #12161a;         /* Deep Charcoal Gray background */
+  --orange-primary: #ff5421;  /* Vibrant high-contrast orange */
+  --text-main: #ffffff;
+  --text-muted: #9ba1a6;
+}
+
+/* --- Navbar Core Layout --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  z-index: 2000;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Brand Logo Styling --- */
+.nav-logo {
+  color: var(--orange-primary);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-logo .logo-sub {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* --- Desktop Links Configuration --- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--orange-primary);
+}
+
+/* --- Morphing Hamburger Button (3 Slide Stacks) --- */
+.hamburger-trigger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--orange-primary);
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 3000; /* Keeps button accessible above expanding background */
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-trigger .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--orange-primary);
+  /* Elastic cubic-bezier handles the smooth twist into an X */
+  transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6), opacity 0.25s ease;
+}
+
+/* --- Morph Transformation Rules --- */
+.hamburger-trigger.is-active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-trigger.is-active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.hamburger-trigger.is-active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Flowy Circular Mobile Overlay Screen --- */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  
+  /* Hides menu seamlessly behind the button's coordinates */
+  clip-path: circle(0% at 92% 45px);
+  transition: clip-path 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: none;
+}
+
+/* Circular ripple reveal */
+.mobile-overlay.is-open {
+  clip-path: circle(145% at 92% 45px);
+  pointer-events: all;
+}
+
+.mobile-links {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.mobile-links a:hover {
+  color: var(--orange-primary);
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 992px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .hamburger-trigger {
+    display: flex;
+  }
+}
