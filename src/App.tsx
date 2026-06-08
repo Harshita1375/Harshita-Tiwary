@@ -7,6 +7,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import FrontendService from "./components/FrontendService"; // Import your service pages
+import FullStackService from "./components/FullStackService";
+import DataAnalytics from "./components/DataAnalytics";
+import CanvaDesign from "./components/CanvaDesign";
 
 const App: React.FC = () => {
   return (
@@ -30,11 +33,9 @@ const App: React.FC = () => {
           
           {/* Service Detail Routes */}
           <Route path="/frontend-service" element={<FrontendService />} />
-          {/* Add your other service paths here as you build them:
           <Route path="/fullstack-service" element={<FullStackService />} />
           <Route path="/data-analytics" element={<DataAnalytics />} />
-          <Route path="/machine-learning" element={<MachineLearning />} /> 
-          */}
+          <Route path="/canva-design" element={<CanvaDesign />} />
         </Routes>
       </main>
     </Router>

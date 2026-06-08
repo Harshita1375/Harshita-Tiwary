@@ -19,9 +19,9 @@ const services = [
     path: "/data-analytics",
   },
   {
-    title: "Machine Learning",
-    subtitle: "AI & Prediction Models",
-    path: "/machine-learning",
+    title: "Canvas Design",
+    subtitle: "Social Media & Marketing Graphics",
+    path: "/canva-design",
   },
 ];
 
