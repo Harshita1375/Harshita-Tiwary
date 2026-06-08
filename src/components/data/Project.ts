@@ -1,5 +1,6 @@
 import FinSyncImg from "./FinSync.png";
 import JobPortalImg from "./JobPortal.png";
+import DeepFakeImg from "./DepFake.png";
 
 export interface Project {
   id: number;
@@ -31,5 +32,14 @@ export const projects: Project[] = [
     github: "https://github.com/Harshita1375/MultiAgent-Recruitment-Management-System",
     live: "https://multi-agent-recruitment-management.vercel.app/",
     image: JobPortalImg,
+  },
+  {
+    id: 3,
+    title: "AI powered Deepfake Detection",
+    description: "Brief description of the project goes here.",
+    tech: ["Python", "TensorFlow", "OpenCV", "Machine Learning", "Streamlit"],
+    github: "https://github.com/Harshita1375/AI-powered-Deepfake-Detection",
+    live: "https://ai-powered-deepfake-detection.streamlit.app/",
+    image: DeepFakeImg,
   },
 ];
