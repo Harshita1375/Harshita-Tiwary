@@ -1,7 +1,8 @@
 import FinSyncImg from "./FinSync.png";
 import JobPortalImg from "./JobPortal.png";
 import DeepFakeImg from "./DepFake.png";
-
+import RagProjectImg from "./RAGProject.png";
+import SalesDashboardImg from "./SalesDashboard.jpg";
 export interface Project {
   id: number;
   title: string;
@@ -41,5 +42,22 @@ export const projects: Project[] = [
     github: "https://github.com/Harshita1375/AI-powered-Deepfake-Detection",
     live: "https://ai-powered-deepfake-detection.streamlit.app/",
     image: DeepFakeImg,
+  },
+  {
+    id: 4,
+    title: "RAG Project",
+    description: "BA Document-Based Question Answering (RAG) System.",
+    tech: ["FastAPI", "LangChain", "React", "LLM"],
+    github: "https://github.com/Harshita1375/NoteAI", 
+    live: "https://note-ai-beryl.vercel.app/",
+    image: RagProjectImg,
+  },
+  {
+    id: 5,
+    title: "Sales DashBoard",
+    description: "Interactive dashboard to track and analyze online sales data",
+    tech: ["Power BI", "CSV Data Processing", "DAX", "Data Visualization"],
+    github: "https://github.com/Harshita1375/Sales-Dashboard",
+    image: SalesDashboardImg,
   },
 ];

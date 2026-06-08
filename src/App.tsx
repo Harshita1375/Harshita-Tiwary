@@ -10,6 +10,7 @@ import FrontendService from "./components/FrontendService"; // Import your servi
 import FullStackService from "./components/FullStackService";
 import DataAnalytics from "./components/DataAnalytics";
 import CanvaDesign from "./components/CanvaDesign";
+import CanvaDesigns from "./components/CanvaDesignsShowCase";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
                 <About />
                 <Skills />
                 <Projects />
+                <CanvaDesigns />
                 <Services />
               </>
             }
