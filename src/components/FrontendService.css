@@ -1,0 +1,138 @@
+.service-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 10%;
+  margin-bottom: 60px;
+}
+
+.service-header span {
+  color: #00d8ff;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.service-header h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.service-header p {
+  color: #9ca3af;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.pricing-table-wrapper {
+  margin-top: 70px;
+  overflow-x: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.pricing-table th {
+  background: #00d8ff;
+  color: black;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.pricing-table td {
+  padding: 18px;
+  border: 1px solid #2d333b;
+}
+
+.pricing-table tr:nth-child(even) {
+  background: #161b22;
+}
+
+.pricing-table tr:hover {
+  background: #1f2937;
+}
+
+.cta-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta-section button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 12px;
+  background: #00d8ff;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.why-choose-us {
+  margin-top: 80px;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00d8ff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+
+
+
+
+.why-card h3 {
+  margin-bottom: 12px;
+  color: #00d8ff;
+}
+
+.why-card p {
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+.why-card {
+  background: #161b22;
+  border: 1px solid #2d333b;
+  border-radius: 16px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  border-color: #00d8ff;
+  box-shadow: 0 0 20px rgba(0, 216, 255, 0.15);
+}
+@media (max-width: 768px) {
+  .frontend-service {
+    padding: 80px 5%;
+  }
+
+  .service-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .service-header p {
+    font-size: 1rem;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-table {
+    min-width: 700px;
+  }
+}

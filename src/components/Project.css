@@ -8,7 +8,6 @@
   text-align: center;
   font-size: 3rem;
   margin-bottom: 60px;
-  animation: fadeUp 0.8s ease-out;
 }
 
 .projects h2 span {
@@ -16,38 +15,45 @@
   text-shadow: 0 0 15px rgba(47, 129, 247, 0.4);
 }
 
-/* Grid */
+/* Swiper */
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+.projects-swiper {
+  width: 100%;
+  padding: 50px 0 80px;
 }
 
-/* Card */
+.projects-swiper .swiper-slide {
+  width: 420px;
+}
+
+/* Project Card */
 
 .project-card {
-  background: rgba(22, 27, 34, 0.8);
+  background: #161b22;
   border: 1px solid #30363d;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  backdrop-filter: blur(12px);
   transition: all 0.35s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border-color: #2f81f7;
   box-shadow: 0 15px 35px rgba(47, 129, 247, 0.15);
+}
+
+.swiper-slide-active .project-card {
+  border-color: #2f81f7;
+  box-shadow: 0 20px 40px rgba(47, 129, 247, 0.2);
 }
 
 /* Image */
 
 .project-card img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
-  transition: 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover img {
@@ -58,8 +64,8 @@
 
 .project-card h3 {
   padding: 20px 20px 10px;
-  font-size: 1.4rem;
   color: #ffffff;
+  font-size: 1.4rem;
 }
 
 .project-card p {
@@ -83,13 +89,12 @@
   border-radius: 30px;
   color: #2f81f7;
   font-size: 0.85rem;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tech-stack span:hover {
   background: #2f81f7;
-  color: #ffffff;
-  transform: translateY(-2px);
+  color: #fff;
 }
 
 /* Buttons */
@@ -107,28 +112,28 @@
   padding: 12px;
   border-radius: 8px;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* View Code */
+/* GitHub Button */
 
 .project-links a:first-child {
   background: #2f81f7;
-  color: #ffffff;
+  color: #fff;
 }
 
 .project-links a:first-child:hover {
   background: #1f6feb;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(47, 129, 247, 0.3);
+  box-shadow: 0 10px 25px rgba(47, 129, 247, 0.3);
 }
 
-/* Live Demo */
+/* Live Demo Button */
 
 .project-links a:last-child {
-  background: transparent;
   border: 1px solid #30363d;
-  color: #ffffff;
+  color: #c9d1d9;
+  background: transparent;
 }
 
 .project-links a:last-child:hover {
@@ -138,10 +143,19 @@
   transform: translateY(-3px);
 }
 
-/* Animation */
+/* Swiper Navigation */
 
-.project-card {
-  animation: fadeUp 0.8s ease forwards;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2f81f7;
+}
+
+.swiper-pagination-bullet {
+  background: #6e7681;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2f81f7;
 }
 
 /* Mobile */
@@ -155,8 +169,8 @@
     font-size: 2.4rem;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-swiper .swiper-slide {
+    width: 320px;
   }
 
   .project-links {
