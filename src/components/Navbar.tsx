@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        COMPANY
-        <span className="logo-sub">YOUR LOGO HERE</span>
+        Harshita Tiwary
+        <span className="logo-sub"></span>
       </div>
 
       {/* Desktop Menu */}
