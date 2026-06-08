@@ -11,31 +11,28 @@ const Contact = () => {
 
     if (!form.current) return;
 
-    
-        emailjs.sendForm(
-  import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  form.current,
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-)
-      
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+
       .then(
         () => {
           setShowSuccess(true);
 
-setTimeout(() => {
-  setShowSuccess(false);
-}, 3000);
+          setTimeout(() => {
+            setShowSuccess(false);
+          }, 3000);
           form.current?.reset();
         },
         (error) => {
-          console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-          alert("Failed to send message.");
+          console.error(error);
         }
       );
-  };
+    }
 
   return (
     <section className="contact-section" id="contact">
@@ -81,16 +78,16 @@ console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
         </button>
       </form>
       {showSuccess && (
-  <div className="success-popup">
-    <div className="success-content">
-      <div className="success-icon">✓</div>
-      <h3>Message Sent!</h3>
-      <p>
-        Thank you for reaching out. I'll get back to you soon.
-      </p>
-    </div>
-  </div>
-)}
+        <div className="success-popup">
+          <div className="success-content">
+            <div className="success-icon">✓</div>
+            <h3>Message Sent!</h3>
+            <p>
+              Thank you for reaching out. I'll get back to you soon.
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
