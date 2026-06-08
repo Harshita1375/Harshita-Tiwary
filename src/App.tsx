@@ -11,6 +11,7 @@ import FullStackService from "./components/FullStackService";
 import DataAnalytics from "./components/DataAnalytics";
 import CanvaDesign from "./components/CanvaDesign";
 import CanvaDesigns from "./components/CanvaDesignsShowCase";
+import Contact from "./components/Contact";
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
                 <Projects />
                 <CanvaDesigns />
                 <Services />
+                <Contact />
               </>
             }
           />
