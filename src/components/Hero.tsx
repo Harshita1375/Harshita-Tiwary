@@ -2,7 +2,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-content">
         <p className="hero-tag">Available for Freelance Projects</p>
 
@@ -10,7 +10,7 @@ function Hero() {
           Hi, I'm <span>Harshita Tiwary</span>
         </h1>
 
-        <h2>Web Designer & React Developer</h2>
+        <h2>Full Stack Developer & Graphic Designer</h2>
 
         <p className="hero-description">
           I help businesses establish a strong online presence through
@@ -19,8 +19,18 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">Hire Me</button>
-          <button className="secondary-btn">View Projects</button>
+          <div className="hero-buttons">
+  <a
+    className="primary-btn"
+    href="mailto:harshita75tiwary@gmail.com?subject=Hiring Inquiry"
+  >
+    Hire Me
+  </a>
+
+  <a className="secondary-btn" href="#projects">
+    View Projects
+  </a>
+</div>
         </div>
       </div>
     </section>

@@ -155,3 +155,8 @@
     flex-wrap: wrap;
   }
 }
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  text-decoration: none; /* removes underline */
+}

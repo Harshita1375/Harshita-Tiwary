@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section className="skills-section">
+    <section id="skills" className="skills-section">
 
       <div className="skills-slider">
         <div className="skills-track">

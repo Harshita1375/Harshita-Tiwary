@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Global Pointer Setup
+   ========================================================================== */
+html, body {
+  cursor: none !important;
+}
+a, button, span, div, input, textarea, .swiper-slide {
+  cursor: none !important;
+}
+
+/* Sharp fast center dot core indicator */
+.fluid-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00d8ff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000; /* Stays absolute top */
+}
+
+/* Elastic trailing fluid bounding box ring */
+.fluid-cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(0, 216, 255, 0.4);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  box-sizing: border-box;
+  /* Controls transition smoothing for shape-shifting and dimensions only, coordinates are handled via high speed JS Lerp */
+  transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-radius 0.2s ease, 
+              background-color 0.2s ease;
+}
+
+/* When general grid content or image links are targeted */
+.fluid-cursor-ring.active-hover {
+  border-color: #00d8ff;
+  background-color: rgba(0, 216, 255, 0.04);
+}
+
+/* When snapping perfectly flat around physical interactive buttons */
+.fluid-cursor-ring.magnetic-active {
+  border-color: #00d8ff;
+  background-color: rgba(0, 216, 255, 0.08);
+  border-width: 1px;
+  box-shadow: 0 0 12px rgba(0, 216, 255, 0.2);
+}
