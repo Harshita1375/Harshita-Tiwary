@@ -14,6 +14,7 @@ import CanvaDesigns from "./components/CanvaDesignsShowCase";
 import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
 import ParticleBackground from "./components/ParticleBackground"; 
+import SocialSidebar from "./components/SocialSidebar";
 import "./index.css"; 
 
 // Sub-component wrapper to automatically run animation resets whenever route paths shift
@@ -79,6 +80,7 @@ const App: React.FC = () => {
                   <CanvaDesigns />
                   <Services />
                   <Contact />
+                  <SocialSidebar />
                 </>
               }
             />
