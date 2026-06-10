@@ -21,10 +21,3 @@
   color: #00d8ff;
   transform: translateY(-3px) scale(1.1);
 }
-
-/* mobile hide */
-@media (max-width: 768px) {
-  .social-sidebar {
-    display: none;
-  }
-}

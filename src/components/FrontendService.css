@@ -263,10 +263,9 @@
     padding: 8px 16px;
     font-size: 0.85rem;
   }
-
-  .cta-section {
-    margin: 70px auto 70px auto;
-  }
+.cta-section {
+  margin: 120px auto;
+}
 
   .cta-section h2 {
     font-size: 1.9rem;
@@ -277,4 +276,34 @@
     max-width: 320px;
     padding: 14px 30px;
   }
+}
+
+.order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 30px; /* adds space above button */
+
+  padding: 16px 40px;
+  background: #161b22;
+  color: #00d8ff;
+
+  border: 1px solid #00d8ff;
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  margin-bottom: 2%;
+  margin-left: 40%;
+}
+
+.order-btn:hover {
+  background: rgba(0, 216, 255, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 216, 255, 0.25);
 }

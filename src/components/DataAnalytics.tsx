@@ -1,5 +1,5 @@
 import "./FrontendService.css";
-
+import { FaWhatsapp } from "react-icons/fa";
 const FrontendService = () => {
   return (
     <section className="FullStack-service">
@@ -199,7 +199,17 @@ const FrontendService = () => {
     to your business or academic requirements.
   </p>
 
-  <button>Order Now</button>
+  <button
+    className="order-btn"
+    onClick={() =>
+      window.open(
+        "https://wa.me/919113770945?text=Hi%20Harshita,%20I'm%20interested%20in%20your%20services.",
+        "_blank"
+      )
+    }
+  >
+    <FaWhatsapp /> Order Now
+  </button>
 </div>
 </section>
   );

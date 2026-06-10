@@ -1,4 +1,5 @@
 import "./FrontendService.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FrontendService = () => {
   return (
@@ -147,9 +148,18 @@ const FrontendService = () => {
         </table>
       </div>
 
-      <div className="cta-section">
-        <button>Order Now</button>
-      </div>
+
+<button
+  className="order-btn"
+  onClick={() =>
+    window.open(
+      "https://wa.me/919113770945?text=Hi%20Harshita,%20I'm%20interested%20in%20your%20services.",
+      "_blank"
+    )
+  }
+>
+  <FaWhatsapp /> Order Now
+</button>
     </section>
   );
 };
