@@ -73,10 +73,6 @@ Feel free to connect with me:
 * GitHub: https://github.com/Harshita1375
 * Fiverr: https://www.fiverr.com/harshi_09_75
 
-## 👩‍💻 About Me
-
-Computer Science graduate passionate about Full Stack Development, Machine Learning, and Problem Solving. Solved 500+ DSA problems using Java and continuously building projects to improve my development skills.
-
 ---
 
 ⭐ If you like this portfolio, consider giving the repository a star.
