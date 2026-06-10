@@ -1,7 +1,7 @@
 import FinSyncImg from "./FinSync.png";
 import JobPortalImg from "./JobPortal.png";
 import DeepFakeImg from "./DepFake.png";
-import RagProjectImg from "./RAGProject.png";
+import RagProjectImg from "./RagProject.png";
 import SalesDashboardImg from "./SalesDashboard.jpg";
 export interface Project {
   id: number;
